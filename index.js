@@ -13,8 +13,12 @@ xhttp.onreadystatechange = function() {
         videoData.forEach(function(video){
             console.log(video);
             var videoDiv = document.createElement('div');
+            videoDiv.classList.add('video-div')
             videoDiv.innerHTML = `
-                <img src=${video.thumbnails.default.url}>
+                <img src=${video.thumbnails.high.url}>
+                <h4>${video.title}</h4>
+                <p>${video.channelTitle}</p>
+                <p>${new Date(video.publishTime).toLocaleDateString()}</p>
             `;
             container.appendChild(videoDiv);
         })
