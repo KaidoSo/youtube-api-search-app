@@ -14,6 +14,7 @@ searchForm.addEventListener('submit', function(e) {
             }));
 
             var container = document.querySelector('#video-divs');
+            container.innerHTML = '';
             videoData.forEach(function(video){
                 console.log(video);
                 var videoDiv = document.createElement('div');
