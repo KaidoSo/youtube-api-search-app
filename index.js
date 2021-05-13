@@ -24,5 +24,5 @@ xhttp.onreadystatechange = function() {
         })
     }
 };
-xhttp.open("GET", "https://www.googleapis.com/youtube/v3/search?part=snippet&q=surfing&key=" + key, true);
+xhttp.open("GET", "https://www.googleapis.com/youtube/v3/search?part=snippet&q=surfing&maxResults=9&key=" + key, true);
 xhttp.send();
